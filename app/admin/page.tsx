@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { useAdminAuth } from "@/hooks/use-admin-auth"
 import { Button } from "@/components/ui/button"
@@ -43,7 +42,12 @@ export default function AdminLoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-[url('/elegant-beauty-salon-interior-with-soft-pink-light.jpg')] bg-cover bg-center opacity-10"></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{
+          backgroundImage: "url('/elegant-beauty-salon-interior-with-soft-pink-light.jpg')",
+        }}
+      />
 
       <Card className="w-full max-w-md relative z-10 shadow-2xl border-0 bg-white/95 backdrop-blur-sm">
         <CardHeader className="text-center space-y-4">
@@ -67,7 +71,7 @@ export default function AdminLoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@nazbeautyzone.com"
+                placeholder="Enter your Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
