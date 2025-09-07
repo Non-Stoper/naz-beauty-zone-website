@@ -86,7 +86,7 @@ Message: ${formData.message}`
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
+      <header className="bg-white/95 border-b border-border sticky top-0 z-50 backdrop-blur-sm shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-playfair font-bold text-primary">Naz Beauty Zone</h1>
@@ -116,7 +116,7 @@ Message: ${formData.message}`
                 Contact
               </button>
             </nav>
-            <Button className="hidden md:inline-flex" onClick={() => scrollToSection("appointment")}>
+            <Button variant="default" className="hidden md:inline-flex" onClick={() => scrollToSection("appointment")}>
               <Calendar className="w-4 h-4 mr-2" />
               Book Now
             </Button>
@@ -135,7 +135,12 @@ Message: ${formData.message}`
               Expert care in makeup, hair, and skincare—crafted just for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6" onClick={() => scrollToSection("appointment")}>
+              <Button
+                variant="default"
+                size="lg"
+                className="text-lg px-8 py-6"
+                onClick={() => scrollToSection("appointment")}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Appointment Now
               </Button>
@@ -443,7 +448,7 @@ Message: ${formData.message}`
                       onChange={(e) => handleInputChange("message", e.target.value)}
                     />
                   </div>
-                  <Button type="submit" className="w-full" size="lg">
+                  <Button variant="default" type="submit" className="w-full" size="lg">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book Appointment
                   </Button>
